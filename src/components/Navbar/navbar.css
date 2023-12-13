@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: larger;
+  box-shadow: 0 0px 3px rgba(0,0,0,0.2);
+  position: absolute; /* Esto hace que la barra de navegación sea fija */
+  left: 0; /* Alinea la barra de navegación a la izquierda de la pantalla */
+  right: 0; /* Alinea la barra de navegación a la derecha de la pantalla */
+  z-index: 1000; /* Asegúrate de que la navbar esté sobre otros elementos */
+  background-color: transparent; /* Un color de fondo para que el contenido debajo no se vea a través de la navbar */
+}
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: transparent;
+
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    display: flex;
+    background-color: transparent;
+
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .nav-item:hover {
+    background-color: #555; /* Cambio de color al hacer hover */
+    border-radius: 3px;
+  }
+  
+  .btn-movilizacion {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Color distintivo para el botón */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-movilizacion:hover {
+    background-color: #66BB6A; /* Cambio de color al hacer hover */
+  }
+  
+  /* Estilos para la responsividad */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      display: none; /* O cambiar a un menú de hamburguesa */
+    }
+    .btn-movilizacion {
+      /* Ajustes para móviles */
+    }
+  }
+  

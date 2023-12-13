@@ -1,0 +1,62 @@
+.hero-container {
+  background-image: url('/src/assets/hero3.png'); /* Asegúrate de usar el nombre correcto del archivo de la imagen */
+  background-size: cover; /* Esto cubrirá completamente el área, ajustando la imagen según sea necesario */
+  background-position: center;
+  background-repeat: no-repeat; /* Esto evitará que la imagen se repita */
+  height: 100vh; /* La altura completa de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  color: white; /* El color de tu texto */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra para hacer el texto más legible */
+  position: relative;
+  padding-left: 50px; /* Añade padding a la izquierda para no pegar el texto al borde */
+}
+
+.hero-text {
+  text-align: left; /* Alinea el texto a la izquierda */
+  max-width: 80%; /* Ajusta esto según necesites */
+  position: absolute;
+  top: 70%;
+  left: 3%; /* Inicia desde el borde izquierdo del contenedor */
+  transform: translateY(-50%); /* Solo mueve el texto verticalmente */
+  padding: 20px; /* Añade espacio alrededor del texto */
+  background-color: transparent
+}
+
+.hero-text h1 {
+  font-size: 2.0rem; /* O el tamaño que prefieras */
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente negro */
+}
+
+.hero-subtext {
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo semi-transparente negro */
+}
+
+.hero-subtext p {
+  margin: 5px 0;
+  font-size: 1rem; /* O el tamaño que prefieras */
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo semi-transparente negro */
+
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .hero-container {
+    padding-left: 20px; /* Menos padding para dispositivos pequeños */
+  }
+
+  .hero-text {
+    left: 0; /* Asegúrate de que el texto no se desplace hacia la derecha en dispositivos pequeños */
+    max-width: 100%; /* Permite que el texto ocupe todo el ancho si es necesario */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtext p {
+    font-size: 0.8rem;
+  }
+}

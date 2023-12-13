@@ -1,0 +1,133 @@
+/* ImageGrid.css */
+.title-container {
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre el título y el grid */
+}
+
+.grid-title {
+  display: inline-block;
+  color: white; /* Letras blancas */
+  padding: 10px 20px;
+  margin-top: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 16px;
+  padding: 56px;
+}
+
+.grid-item {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 4px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que los bordes redondeados se apliquen a las imágenes también */
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Ancho reducido del modal */
+  max-width: 1200px; /* Máximo ancho del modal ajustado */
+  height: 100vh; /* Altura ajustada del modal */
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden; /* Elimina el desbordamiento para evitar el scroll */
+  z-index: 1050;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro con transparencia */
+  z-index: 1040;
+}
+
+.pdf-container {
+  position: relative;
+  background: #fff; /* Fondo blanco para contraste con los botones */
+  z-index: 10;
+  display: flex;
+  justify-content: center; /* Centra el PDF en el contenedor si es más pequeño */
+  align-items: center; /* Centra verticalmente el PDF en el contenedor */
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  margin-top: 30px; /* Espacio arriba del contenedor del PDF */
+}
+
+/* Estilos para los botones de navegación */
+.pdf-navigation {
+  position: absolute;
+  background-color: transparent;
+  top: 0px; /* Ajustar si es necesario para posicionar verticalmente */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1051; /* Asegúrate de que este z-index sea más alto que el del Document */
+  display: flex;
+  justify-content: center; /* Centrar botones horizontalmente dentro del contenedor */
+  width: 100%; /* Establecer el ancho al 100% del contenedor padre para permitir centrar los hijos */
+}
+
+.pdf-navigation button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: white; /* Botones blancos */
+  color: #007bff; /* Color de texto que contraste con el blanco */
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0 10px; /* Espacio horizontal entre botones */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar profundidad */
+}
+
+.pdf-navigation button:disabled {
+  background-color: #eaeaea; /* Más oscuro para indicar que está deshabilitado */
+  color: #ccc; /* Texto gris para indicar que está deshabilitado */
+  cursor: not-allowed;
+  box-shadow: none; /* Sin sombra para botones deshabilitados */
+}
+
+.navigation-controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Botón para cerrar el modal */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Estilos adicionales para asegurar que el PDF no tenga una barra negra */
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  height: auto !important;
+}

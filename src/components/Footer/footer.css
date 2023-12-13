@@ -1,0 +1,47 @@
+.footer {
+  background-color: #333; /* Color de fondo del footer */
+  color: #fff; /* Color del texto */
+  font-size: 0.9rem;
+  padding: 20px 0; /* Agrega un relleno vertical para asegurar espacio alrededor del contenido */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: row; /* Alinea los elementos del footer en fila */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+  max-width: 1200px; /* Establece un ancho máximo para el contenido del footer */
+  margin: 0 auto; /* Centra el contenedor del contenido del footer en la página */
+}
+
+.footer-section {
+  margin: 10px;
+  padding: 20px;
+  flex-basis: calc(25% - 20px); /* Asigna un ancho flexible a cada sección, restando el margen */
+  display: flex; /* Hace que cada sección sea un contenedor flex */
+  flex-direction: column; /* Organiza el contenido de cada sección en una columna */
+  align-items: center; /* Centra el contenido de la sección */
+  min-width: 150px; /* Mínimo ancho para cada sección */
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #f1f1f1;
+}
+
+.footer-section p {
+  text-align: center; /* Asegura que el texto esté centrado en cada sección */
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+  }
+
+  .footer-section {
+    flex-basis: 100%; /* Permite que cada sección ocupe el ancho completo */
+    margin-bottom: 20px; /* Agrega un margen inferior entre secciones */
+  }
+}
